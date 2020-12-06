@@ -1,13 +1,23 @@
-'use strict';
-const inputs = document.querySelectorAll("input");
-inputs.forEach(input => {
-    input.addEventListener("change",changeSecsses);
+"use strict";
+const inputs = document.querySelector(".inputs");
+inputs.addEventListener("change", (e) => {
+  const currentInput = e.target.closest("input");
+  if (currentInput) {
+    const sufix = currentInput.dataset.sizing || "";
+    document.documentElement.style.setProperty(
+      `--${currentInput.name}`,
+      currentInput.value + sufix
+    );
+  }
 });
-inputs.forEach(input => {
-    input.addEventListener("mousemove",changeSecsses);
-}); 
 
-function changeSecsses() {
-    const sufix = this.dataset.sizing || "";
-        document.documentElement.style.setProperty(`--${this.name}`, this.value + sufix)
-}
+inputs.addEventListener("mousemove", (e) => {
+  const currentInput = e.target.closest("input");
+  if (currentInput) {
+    const sufix = currentInput.dataset.sizing || "";
+    document.documentElement.style.setProperty(
+      `--${currentInput.name}`,
+      currentInput.value + sufix
+    );
+  }
+});
