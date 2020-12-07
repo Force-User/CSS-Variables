@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="app">
+      <div class="wrapper">
+          <div class="inputs">
+              <label for="color">Color:<input type="color" value="#ffffff" name="color"></label>
+              <label for="blur">Blur:<input type="range" value="0" max="15" name="blur" data-sizing="px"></label>
+              <label for="spacing">Spacing:<input type="range" value="0" max="50"  name="spacing" data-sizing="px"></label>
+              <label for="contrast">Contrast: <input type="range" value="100" min="50" max="100" name="contrast" data-sizing="%"></label>
+              <label for="brightness">Brightness: <input type="range" value="100" min="30" max="100" name="brightness" data-sizing="%"></label>
+              <label for="grayscale">grayscale: <input type="range" value="0" min="0" max="100" name="grayscale" data-sizing="%"></label>
+              <label for="invert">Invert: <input type="range" value="0" min="0" max="100" name="invert" data-sizing="%"></label>
+              <label for="sepia">Sepia: <input type="range" value="0" min="0" max="100" name="sepia" data-sizing="%"></label>
+              <label for="saturate">Saturate: <input type="range" value="0" min="100" max="500" name="saturate" data-sizing="%"></label>
+          </div>
+        <img src="image/Poster-sized_portrait_of_Barack_Obama.jpg" alt="" />
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
